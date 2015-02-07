@@ -7,6 +7,7 @@ class BaseConfig(object):
     # shortened for readability
     SECRET_KEY = '\xbf\xb0\x11\xb1\xcd\xf9\xba\x8bp\x0c...'
     SQLALCHEMY_DATABASE_URI = 'sqlite:///app.db'
+    LOGIN_DISABLED = True
 
 
 class TestConfig(BaseConfig):

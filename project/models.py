@@ -5,6 +5,8 @@ from sqlalchemy import ForeignKey
 from sqlalchemy.orm import relationship
 
 
+
+
 class BlogPost(db.Model):
 
     __tablename__ = "posts"
@@ -21,6 +23,11 @@ class BlogPost(db.Model):
 
     def __repr__(self):
         return '<title {}'.format(self.title)
+
+
+
+
+
 
 
 class User(db.Model):

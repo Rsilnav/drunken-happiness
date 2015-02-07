@@ -22,7 +22,7 @@ def test():
     tests = unittest.TestLoader().discover('tests')
     unittest.TextTestRunner(verbosity=2).run(tests)
 
-'''
+
 @manager.command
 def cov():
     """Runs the unit tests with coverage."""
@@ -41,7 +41,7 @@ def cov():
     covdir = os.path.join(basedir, 'coverage')
     cov.html_report(directory=covdir)
     cov.erase()
-'''
+
 
 if __name__ == '__main__':
     manager.run()
