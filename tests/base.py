@@ -1,24 +1,22 @@
 from flask.ext.testing import TestCase
 
-from project import app, db
-#from project.models import User, BlogPost
+from app import *
 
 
 class BaseTestCase(TestCase):
     """A base test case."""
 
     def create_app(self):
-        app.config.from_object('config.BaseConfig')
+        app.config.from_object('config')
         return app
 
     def setUp(self):
-        pass
-        #db.create_all()
+        db.create_all()
         #db.session.add(User("admin", "ad@min.com", "admin"))
-        #db.session.add(BlogPost("Test post", "This is a test. Only a test.", "admin"))
-        #db.session.commit()
+        #db.session.add(
+            #BlogPost("Test post", "This is a test. Only a test.", "admin"))
+        db.session.commit()
 
     def tearDown(self):
-        pass
-        #db.session.remove()
-        #db.drop_all()
+        db.session.remove()
+        db.drop_all()

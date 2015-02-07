@@ -5,10 +5,7 @@ import coverage
 from flask.ext.script import Manager
 from flask.ext.migrate import Migrate, MigrateCommand
 
-from project import app, db
-
-
-app.config.from_object('config.BaseConfig')
+from app import app, db
 
 migrate = Migrate(app, db)
 manager = Manager(app)

@@ -1,26 +1,18 @@
+# -*- coding: utf8 -*-
 import os
+basedir = os.path.abspath(os.path.dirname(__file__))
 
+CSRF_ENABLED = True
+SECRET_KEY = 'you-will-never-guess'
 
-# default config
-class BaseConfig(object):
-    DEBUG = True
-    # shortened for readability
-    SECRET_KEY = '\xbf\xb0\x11\xb1\xcd\xf9\xba\x8bp\x0c...'
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///app.db'
-    LOGIN_DISABLED = True
+if os.environ.get('DATABASE_URL') is None:
+    SQLALCHEMY_DATABASE_URI = ('sqlite:///' + os.path.join(basedir, 'app.db') +
+                               '?check_same_thread=False')
+else:
+    SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
+SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
+SQLALCHEMY_RECORD_QUERIES = True
 
+# slow database query threshold (in seconds)
+DATABASE_QUERY_TIMEOUT = 0.5
 
-class TestConfig(BaseConfig):
-    DEBUG = True
-    TESTING = True
-    WTF_CSRF_ENABLED = False
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///:memory:'
-
-
-class DevelopmentConfig(BaseConfig):
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///app.db'
-    DEBUG = True
-
-
-class ProductionConfig(BaseConfig):
-    DEBUG = False
