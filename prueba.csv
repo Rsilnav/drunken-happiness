@@ -1,0 +1,11 @@
+2	La capacidad equivalente de dos condensadores en serie puede escribirse de la forma	$Ceq = \frac{C1 * C2}{C1+C2}$	$\frac{1}{Ceq} = C1 + C2$	$Ceq = \frac{1}{C1} + \frac{1}{C2}$	Ceq = C1 + C2	1
+2	La capacidad equivalente de dos condensadores en paralelo puede escribirse de la forma	Ceq = C1 + C2	(1)/Ceq =1/C1 + 1/C2	Ceq =(C1 C2)/(C1+C2)	Ceq = 1/C1 + 1/C2	1
+2	Tres condensadores tienen capacidades de 2, 4 y 8 μF. Determinar la capacidad equivalente si están conectados en paralelo	$14 \mu F$	$1.14 \mu F$	No se pueden conectar tres condensadores en paralelo	$4.6 \mu F$	1
+2	Por una resistencia circula una corriente I. La potencia disipada en la resistencia es P. ¿Cuál es la potencia disipada si por la misma resistencia circula una corriente 3I? (Suponer que la resistencia no se modifica)	$3P$	$\frac{P}{3}$	$9P$	$\frac{P}{9}$	3
+2	Dos resistencias están conectadas en serie. La resistencia A es el doble que la de B. Si la corriente que circula por la resistencia A es I, ¿cuál es la corriente que circula por B?	$I$	$2I$	$\frac{I}{2}$	$\frac{I}{4}$	1
+2	La regla de las mallas de Kirchhoff es una consecuencia de	la conservación de la carga	la conservación de la energía	las leyes de Newton	la cuantización de la carga	2
+2	Un amperímetro ideal deberá tener resistencia interna	Infinita	Cero	Constante	Variable	2
+2	Un calentador posee una resistencia variable conectada a una fuente de voltaje constante. Para incrementar la emisión de calor, ¿qué debemos hacer?	Aumentar la resistencia	Disminuir la resistencia	Nada	Aumentar el voltaje	2
+2	Un voltímetro ideal deberá tener una resistencia interna	Infinita	Cero	constante	variable	1
+2	Una batería se conecta a una asociación en serie de un interruptor, una resistencia, y un condensador inicialmente descargado. El interruptor se cierra en el instante t = 0. ¿Cuál de las siguientes afirmaciones es cierta?	Cuando la carga del condensador crece, la corriente crece	Cuando la carga del condensador crece, la caída de voltaje a través de la resistencia crece	Cuando la carga del condensador crece, la caída de voltaje a través del condensador decrece	Cuando la carga del condensador crece, la caída del voltaje a través de la resistencia decrece	4
+2	La ley de Ohm relaciona los parámetros de tensión, resistencia e intensidad según la fórmula	$V = \frac{R}{I}$	$V = \frac{I}{R}$	$I = \frac{V}{R}$	$I = \frac{R}{V}$	3
