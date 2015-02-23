@@ -7,6 +7,7 @@ a,
 a:focus,
 a:hover {
   color: #77f;
+  text-decoration: none;
 }
 
 h1 {
@@ -27,10 +28,19 @@ h1 {
   color: #222;
 }
 
-.list-group-item:hover {
-  background-color: #549E54;
+.inner > ul {
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: left;
 }
 
+.media-object {
+  max-height: 150px;
+}
+
+.masthead-brand > a {
+  color: #fff;
+}
 
 
 /*
@@ -68,7 +78,7 @@ body {
 
 /* Padding for spacing */
 .inner {
-  padding: 30px;
+  padding: 15px;
 }
 
 
@@ -165,6 +175,11 @@ body {
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
+
+  .list-group-item:hover {
+  background-color: #549E54;
+}
+
 }
 
 @media (min-width: 992px) {

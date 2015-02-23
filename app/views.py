@@ -25,7 +25,11 @@ def correctsession(f):
 
 @app.route('/')
 def index():
-    return redirect(url_for('preguntame'))
+    return render_template('my-index.html')
+
+@app.route('/contacto')
+def contacto():
+    return render_template('my-contacto.html')
 
 @app.route('/populate')
 def populate():
@@ -50,7 +54,6 @@ def preguntame():
 
 
 @app.route('/test')
-#@correctsession
 def test():
 
     num = db.session.query(Pregunta).count()
@@ -61,11 +64,11 @@ def test():
     session['pregunta'] = p.id
 
     if not 'numero' in session:
-        session['numero'] = 1
+        session['numero'] = 0
     if 'acierto' in session and session['acierto'] == False:
-        session['numero'] = 1
+        session['numero'] = 0
 
-    return render_template('my-test.html', numero=session['numero'], pregunta=p)
+    return render_template('my-test.html', numero=session['numero']+1, pregunta=p)
 
 @app.route('/answer/<int:id>')
 def answer(id):
@@ -73,7 +76,7 @@ def answer(id):
     p = None
     a = db.session.query(Pregunta).filter(Pregunta.id==session['pregunta']).first()
 
-    print a.correcta
+    
 
     if a.correcta == id:
         session['acierto'] = True
