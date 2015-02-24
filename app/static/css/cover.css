@@ -29,8 +29,8 @@ h1 {
 }
 
 .inner > ul {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
   text-align: left;
 }
 
@@ -74,23 +74,31 @@ body {
 .cover-container {
   margin-right: auto;
   margin-left: auto;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 120px;
 }
 
 /* Padding for spacing */
 .inner {
   padding: 15px;
+  padding-top: 5%;
 }
 
 
 /*
  * Header
  */
+
+.masthead {
+  top: 0px;
+  position: absolute;
+  width: 100%;
+}
+
 .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
 
 .masthead-nav > li {
   display: inline-block;
@@ -160,11 +168,9 @@ body {
 @media (min-width: 768px) {
   /* Pull out the header and footer */
   .masthead {
-    position: fixed;
     top: 0;
   }
   .mastfoot {
-    position: fixed;
     bottom: 0;
   }
   /* Start the vertical centering */

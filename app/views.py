@@ -44,6 +44,14 @@ def populate():
             l = line.split("\t")
             q = Pregunta(l[1], l[2], l[3], l[4], l[5], int(l[6]))
             db.session.add(q)
+
+    with open("./qmelectron.csv") as f:
+        for line in f:
+            line = line.decode('utf-8')
+            l = line.split("\t")
+            q = Pregunta(l[1], l[2], l[3], l[4], l[5], int(l[6]))
+            db.session.add(q)
+
     db.session.commit()
 
     return "Populated"

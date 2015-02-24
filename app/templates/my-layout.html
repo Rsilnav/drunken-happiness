@@ -33,12 +33,15 @@
 
       <div class="site-wrapper-inner">
 
+        
+
         <div class="cover-container">
+
 
           <div class="masthead clearfix">
             <div class="inner">
               <h3 class="masthead-brand"><a href="{{ url_for('index') }}">UVa Questionator</a></h3>
-              <nav>
+              <nav class="">
                 <ul class="nav masthead-nav">
                   <li {% if request.path == "/" %}class="active"{% endif %}><a href="{{ url_for('index') }}">Inicio</a></li>
                   <li {% if request.path == "/preguntame" %}class="active"{% endif %}><a href="{{ url_for('preguntame') }}">¡Pregúntame!</a></li>
@@ -47,6 +50,8 @@
               </nav>
             </div>
           </div>
+
+          
 
           {% block content %}{% endblock %}
 
